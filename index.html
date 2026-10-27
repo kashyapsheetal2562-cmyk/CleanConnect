@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CleanConnect helps communities report waste hotspots and support cleaner neighbourhoods.">
+  <title>CleanConnect | Cleaner Communities Start Here</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#"><span class="brand-icon">✦</span> CleanConnect</a>
+    <nav><a href="#how">How it works</a><a href="#reports">Community reports</a><a class="nav-cta" href="#report">Report waste</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">COMMUNITY ACTION · CLEANER TOMORROWS</span>
+        <h1>A cleaner neighbourhood starts with <em>one report.</em></h1>
+        <p>Spot a waste hotspot? Share its location and a photo so your community can see the problem and take action together.</p>
+        <a class="primary-btn" href="#report">Report a waste hotspot <span>↗</span></a>
+        <div class="impact-note"><span class="pulse"></span> Small actions. Cleaner shared spaces.</div>
+      </div>
+      <div class="hero-art">
+        <div class="art-card card-back"><span>COMMUNITY CLEAN-UP</span><div class="mini-landscape">🌳　🌿　🌱</div></div>
+        <div class="art-card card-front"><div class="art-icon">♻</div><h3>See it. Report it.</h3><p>Make local waste visible.</p><div class="art-tags"><span>Report</span><span>Connect</span><span>Improve</span></div></div>
+        <div class="floating-leaf leaf-one">✿</div><div class="floating-leaf leaf-two">✦</div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Project goals">
+      <div><strong>01</strong><span>Notice a problem</span></div><div><strong>02</strong><span>Share clear details</span></div><div><strong>03</strong><span>Encourage local action</span></div>
+    </section>
+
+    <section id="how" class="how section">
+      <div class="section-heading"><span class="eyebrow">HOW IT WORKS</span><h2>Turn a concern into a community action.</h2></div>
+      <div class="steps">
+        <article><span class="step-num">01</span><h3>Spot waste</h3><p>Find litter or an overflowing waste area in a shared space.</p></article>
+        <article><span class="step-num">02</span><h3>Share a report</h3><p>Add a short description, area and a photo when available.</p></article>
+        <article><span class="step-num">03</span><h3>Raise awareness</h3><p>Community members can view reports and coordinate responsibly.</p></article>
+      </div>
+    </section>
+
+    <section id="report" class="report-section section">
+      <div class="section-heading"><span class="eyebrow">MAKE A DIFFERENCE</span><h2>Report a waste hotspot</h2><p>Share only public-area information. Do not upload faces, personal details or sensitive locations.</p></div>
+      <form id="reportForm" class="report-form">
+        <div class="form-grid">
+          <label>Report title<input id="title" required maxlength="70" placeholder="e.g. Litter near the bus stop"></label>
+          <label>Area / location<input id="location" required maxlength="100" placeholder="e.g. Main market, Mathura"></label>
+        </div>
+        <label>What did you notice?<textarea id="description" required maxlength="500" rows="3" placeholder="Briefly describe the waste issue..."></textarea></label>
+        <label class="upload-box" for="photo"><span class="upload-symbol">↥</span><span><strong>Add a photo (optional)</strong><small id="photoLabel">Choose a JPG, PNG or WebP image, up to 8 MB.</small></span><input id="photo" type="file" accept="image/png,image/jpeg,image/webp"></label>
+        <div id="uploadStatus" class="upload-status" role="status"></div>
+        <button class="primary-btn submit-btn" type="submit">Publish community report <span>↗</span></button>
+        <p class="form-note">Demo note: reports are saved in this browser. Connect Cloudinary below to enable cloud photo uploads.</p>
+      </form>
+    </section>
+
+    <section id="reports" class="reports-section section">
+      <div class="reports-title"><div><span class="eyebrow">COMMUNITY BOARD</span><h2>Recent reports</h2></div><button id="clearDemo" class="text-btn" type="button">Clear demo reports</button></div>
+      <div id="reportList" class="report-list"></div>
+      <div id="emptyState" class="empty-state"><span>🌱</span><h3>Your community board starts here</h3><p>Be the first to share a local waste concern.</p></div>
+    </section>
+    <section class="callout"><span>♻</span><div><h2>Cleaner places take all of us.</h2><p>CleanConnect is a prototype for community awareness. Reports do not automatically notify municipal authorities.</p></div></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-icon">✦</span> CleanConnect</a><span>Built for social good · Community-led environmental awareness</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
